@@ -51,10 +51,10 @@ Validate truth assignments against project constraints
 ```py
 validation_result = modus_tools.run({
 "project_id": "your_project_id",
-"assignments": {
+"assignments": json.dumps({
 "RecentOrder": True,
 "DamagedProduct": False
-}
+})
 })
 ```
 
