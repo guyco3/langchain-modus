@@ -80,6 +80,9 @@ Example invalid output:
 
 ## Error Handling ⚠️
 Both tools return error dictionaries in this format when exceptions occur:
+```py
+{"error": "Descriptive error message"}
+```
 
 ## Examples
 Check out the examples dir
