@@ -1,7 +1,6 @@
 # LangChain Modus Integration 🔗➗
 
-LangChain integration for Modus logical constraint systems. Validate logical predicates and enforce business rules within your LLM applications.
-
+LangChain integration for Modus logical constraint systems. Validate logical predicates and enforce business rules within your LLM applications. Could be useful in making LLM agents more accurate and with tagging objects more accurately (example tagging a refund request with either should approve or not with a reason also) using both deterministic rules + LLMs.
 ## Installation 💻
 ```bash
 pip3 install -e .
