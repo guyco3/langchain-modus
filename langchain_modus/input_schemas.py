@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, Json
 from typing import Dict
 
 class GetPredicatesInput(BaseModel):
@@ -6,9 +6,9 @@ class GetPredicatesInput(BaseModel):
     project_id: str = Field(..., description="ID of the project to fetch predicates for")  # Changed from document_id
 
 class ValidateAssignmentInput(BaseModel):
-    """Input for ValidateAssignmentTool"""
-    project_id: str = Field(..., description="ID of the project to validate")  # Changed from document_id
-    assignments: Dict[str, bool] = Field(
-        ..., 
-        description="Dictionary of truth assignments for predicates"
+    project_id: str = Field(..., description="Modus project ID")
+    assignments: Json[Dict[str, bool]] = Field(
+        ...,
+        description="JSON string of truth assignments",
+        example='{"RecentOrder": true, "DamagedProduct": false}'
     )
